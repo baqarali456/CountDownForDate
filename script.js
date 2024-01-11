@@ -5,7 +5,12 @@ let date = new Date();
  date.setMinutes(55);
  date.setSeconds(0);
 // console.log(cominghour);
-comingTime.innerHTML = `${date}`;
+ let setDateforTime = date.toLocaleTimeString();
+ console.log(setDateforTime);
+ 
+ 
+ 
+comingTime.innerHTML = `${setDateforTime}`;
 
 
 
@@ -39,7 +44,7 @@ let currentTime = new Date();
  let remaingmin = comingmin - currentmin
  let remaingsec = Math.abs(comingsec - currentsec);
  const CountDown = document.getElementById('CountDown');
- CountDown.innerHTML = `Coming Soon in ${remaingHour} ${remaingmin} ${remaingsec}`
+ CountDown.innerHTML = `Coming Soon in ${remaingHour} ${remaingmin} ${remaingsec} Hours`
  
  
 },1000)
